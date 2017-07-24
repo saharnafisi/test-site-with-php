@@ -11,14 +11,13 @@
             if($_POST["gender"]=="female"){
             $gender=true;
             }
-        elseif($_POST["gender"]=="male"){
-            $gender=false;
+            elseif($_POST["gender"]=="male"){
+                $gender=false;
             }
         }
         echo $_SESSION["conn"];
-    }
-    try{
-            $command="INSERT INTO `user`(`name`, `userName`, `password`, `gender`)
+        try{
+            $command="insert into `user`(`name`, `userName`, `password`, `gender`)
             VALUES ('$name','$userName','$password',$gender)";
             $_SESSION["conn"]->exec($command);
             echo "کاربر با موفقیت افزوده شد";
@@ -26,6 +25,8 @@
         catch(PDOException $ex){
             echo $command . "<br>" . $ex->getMessage();
         }
+    }
+    
     
  ?>
 
