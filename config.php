@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION["test"]="sahar";
 $server_name="localhost";
 $user_name="root";
 $password="";
@@ -14,4 +15,5 @@ catch(PDOException $e)
 echo "Connection failed: " . $e->getMessage();
 $_SESSION["conn"]=false;
 }
+
 ?>
