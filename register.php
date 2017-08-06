@@ -1,9 +1,8 @@
 <?php
-    session_start();
     include 'header.html'; 
     include 'register.html';
-    echo $_SESSION["conn"];
-    if(isset($_POST["sumbit"])){
+    /*if(isset($_POST["sumbit"])){
+        echo "sahaarrr";
         $name=$_POST["name"];
         $userName=$_POST["userName"];
         $password=$_POST["password"];
@@ -15,17 +14,16 @@
                 $gender=false;
             }
         }
-        echo $_SESSION["conn"];
         try{
             $command="insert into `user`(`name`, `userName`, `password`, `gender`)
             VALUES ('$name','$userName','$password',$gender)";
-            $_SESSION["conn"]->exec($command);
+            $conn->exec($command);
             echo "کاربر با موفقیت افزوده شد";
         }
         catch(PDOException $ex){
             echo $command . "<br>" . $ex->getMessage();
         }
-    }
+    }*/
     
     
  ?>

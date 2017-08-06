@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<div class="container">
-    <form action="register.php" method="post">
-        <div class="form-group">
-            <label for="name">نام و نام خانوادگی:</label><br>
-            <input type="text" name="name" class="form-control"><br>
-        </div>
-        <div class="form-group">
-            <label for="username">نام کاربری: </label><br>
-            <input type="text" name="userName" class="form-control" required><br>
-        </div>
-        <div class="form-group">
-            <label for="password">رمز عبور: </label><br>
-            <input type="password" name="password" class="form-control" required><br>
-        </div>
-        <label for="gender">جنسیت:</label>
-        <div class="radio">
-            <label><input type="radio" name="gender" value="female" required>زن</label>
-            <label><input type="radio" name="gender" value="male" required>مرد</label>
-        </div>
-        <input type="submit" value="افزودن کاربر" class="btn btn-defualt">
+<html>
+    <meta charset="utf-8">
+    <div class="container">
+        <form action="inserUserInDB.php" method="post">
+            <div class="form-group">
+                <label for="name">نام و نام خانوادگی:</label><br>
+                <input type="text" name="name" class="form-control"><br>
+            </div>
+            <div class="form-group">
+                <label for="username">نام کاربری: </label><br>
+                <input type="text" name="userName" class="form-control" required><br>
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور: </label><br>
+                <input type="password" name="password" class="form-control" required><br>
+            </div>
+            <label for="gender">جنسیت:</label>
+            <div class="radio">
+                <label><input type="radio" name="gender" value="female" required>زن</label>
+                <label><input type="radio" name="gender" value="male" required>مرد</label>
+            </div>
+            <input type="submit" value="افزودن کاربر" class="btn btn-defualt">
 
-    </form>
-</div>
+        </form>
+    </div>
+</html>
