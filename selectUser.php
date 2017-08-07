@@ -15,20 +15,18 @@
         $stmt=$conn->query("SELECT * FROM `user` WHERE `userName`='$username' and `password`='$password';");
         $result=$stmt->fetch();
         if($result["name"]!=""){
-            echo "خوش امدید";
+            echo "خوش امدید" .$username;
             $_SESSION["login"]=true;
             $_SESSION["username"]=$username;
+            Redirect("main.php");
         }
         else{
             echo "نام کاربری یا رمز عبور صحیح نمیباشد";
+            $_SESSION["login"]=false;
+            $_SESSION["username"]="";
         }
     }
     catch(PDOException $ex){
         echo $command . "<br>" . $ex->getMessage();
     }
-    /*Redirect("http://localhost/mini_project/main.php");
-    $_SESSION["login"]=true;
-    $_SESSION["username"]=$userName;
-    echo $_SESSION["login"];
-    echo $_SESSION["username"];*/
 ?>
